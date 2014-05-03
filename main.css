@@ -422,7 +422,7 @@ input:focus ~ .lightbulb {
 	transition: all .1s 1.5s linear;
 }
 
-/*Example nine - */
+/*Example nine - Sprite sheet */
 
 .example-nine {
 	margin-top: 2em;
@@ -431,25 +431,58 @@ input:focus ~ .lightbulb {
 
 
 .spelunky {
-    width: 75px;
+    width: 80px;
     height: 80px;
+    display: inline-block;
     background-image: url(images/patrick-spelunky.png);
-    -webkit-animation: play 1.8s steps(10) infinite;
-    		animation: play 1.8s steps(10) infinite;
+    -webkit-animation: play-x 1.8s steps(10) infinite,
+    				   play-y 10.8s steps(10) infinite;
+    		animation: play-x 1.8s steps(10) infinite,
+    				   play-y 10.8s steps(10) infinite;
+	 background-position-y: 0px;
 }
 
 
-@-webkit-keyframes play {
+@-webkit-keyframes play-x {
    from { background-position-x:    0px; }
      to { background-position-x: -800px; }
 }
 
-@-webkit-keyframes play {
+@keyframes play-x {
    from { background-position-x:    0px; }
      to { background-position-x: -800px; }
 }
 
+@-webkit-keyframes play-y {
+   from { background-position-y:    0px; }
+     to { background-position-y: -800px; }
+}
 
+@keyframes play-y {
+   from { background-position-y:    0px; }
+     to { background-position-y: -800px; }
+}
+
+.sonic-spelunky {
+	width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-image: url(images/sonic.png);
+    -webkit-animation: sonic-x 1.8s steps(11) infinite;
+    		animation: sonic-x 1.8s steps(11) infinite;
+	 background-position-y: -80px;
+}
+
+
+@-webkit-keyframes sonic-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -880px; }
+}
+
+@keyframes sonic-x {
+   from { background-position-x:    0px; }
+     to { background-position-x: -880px; }
+}
 
 
 
