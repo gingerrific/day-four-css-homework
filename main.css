@@ -199,12 +199,12 @@
 	width: 16em;
 }
 
-/*.monster {
+.monster {
 	height: 15em;
 	width: 15em;
 	position: relative;
 }
-*/.monster-body {
+.monster-body {
 	height: 10em;
 	width: 10em;
 	border-radius: 100%;
@@ -254,7 +254,7 @@
 	margin-left: 21%;
 	position: relative;
 	z-index: 100;
-	box-shadow: .05em .05em .1em black;
+	box-shadow: 0 0 0 .1em black;
 }
 
 /*.monster-tooth {
@@ -272,37 +272,188 @@
 	width: 7em;
 	height: .55em;
 	border-radius: 100%;
-	z-index: -10;
-	transition: all .8s ease;
 	background-color: rgba(0,0,0,.1);
-	z-index: -2;
-	margin-top: -.25em;
+	
+	position: absolute;
+	bottom:4.6em;
 
 
 }
 
+@-webkit-keyframes jabber {
+	0%, 100% {height: 1em;}
+	25% {height: 1.25em;}
+	50% {height: 1.5em;}
+	75% {height: 1.25em;}
+}
 
-@webkit-keyframes shadow-move {
-	0%, 100% { -webkit-transform: translate (0em);
-	}
-	50% { -webkit-transform: translate (3em);
+@keyframes jabber{
+	0%, 100% {height: 1em;}
+	25% {height: 1.25em;}
+	50% {height: 1.5em;}
+	75% {height: 1.25em;}
+}
 
-	}
+@-webkit-keyframes shadowmove{
+    
+    0% {left: 5%}
+    25% {left: 5.25%;}
+    50% {left: 5.5%;}
+    75% {left: 5.25%;}
+    100% {left: 5%;}
+}
+
+@keyframes shadowmove{
+    
+    0% {left: 5%}
+    25% {left: 5.25%;}
+    50% {left: 5.5%;}
+    75% {left: 5.25%;}
+    100% {left: 5%;}
+}
+
+.shadow{
+    -webkit-animation:shadowmove 4s infinite linear;
+    animation:shadowmove 4s infinite linear;
+}
+  
+
+
+@-webkit-keyframes monstertilt{
+    
+    0% {-webkit-transform: rotate(0deg); left: 0%}
+    25% {-webkit-transform: rotate(7deg);left: 5.25%;}
+    50% {-webkit-transform: rotate(0deg);left: 0%}
+    75% {-webkit-transform: rotate(-7deg);left: -5.25%;}
+    100% {-webkit-transform: rotate(0deg);left: 0%}
+}
+
+@keyframes {
+    
+    0% {transform: rotate(0deg); left: 0%}
+    25% {transform: rotate(7deg);left: 5.25%;}
+    50% {transform: rotate(0deg);left: 0%}
+    75% {transform: rotate(-7deg);left: -5.25%;}
+    100% {transform: rotate(0deg);left: 0%}
 }
 
 
--keyframes shadow-move {
-	0%, 100% { -webkit-transform: translate (0em);
-	}
-	50% { -webkit-transform: translate (3em);
-	}
+.monster-body {
+	-webkit-animation:monstertilt 4s infinite linear;
+    animation:monstertilt 4s infinite linear;
+}
+
+.monster-mouth {
+	-webkit-animation:jabber .2s infinite linear;
+    animation:jabber .2s infinite linear;
 }
 
 
-.monster:hover .shadow {
-	-webkit-animation: shadow-move 1s infinite;
-	animation: shadow-move 1s infinite;
+@webkit-keyframes monsterhover {
+	 0% {transform: translateY(0)};
+    50% {transform: translateY(1em)};
+    100% {transform: translateY(2em)};
+
 }
+
+@keyframes monsterhover {
+	0% {transform: translateY(0)};
+    50% {transform: translateY(1em)};
+    100% {transform: translateY(2em)};
+}
+
+.monster:hover{
+		-webkit-animation:monsterhover .2s 1 linear;
+	    animation:monsterhover .2s 1 linear;
+}
+
+
+
+/*Example 8 - click for inspiration */
+
+.example-eight {
+	margin-top: 2em;
+	position: relative;
+	
+}
+
+
+
+.input-field input {
+	font-family: Helvetica;
+	font-size: 14px;
+	display: inline-block;
+	
+
+}
+
+.lightbulb{
+
+	display: inline-block;
+	height: 1.6em;
+	width: 1.6em;
+	position: relative;
+	margin-right: 25%;
+	float: right;
+	opacity: 0;
+	
+}
+.lightbulb img {
+	height: 1.3em;
+	width: 1.6em;
+	padding-top: .3em;
+}
+.inspiration {
+	display: inline-block;
+	opacity: 1;
+}
+
+input:focus ~ .inspiration {
+	margin-left: 54.35%;
+	opacity: 0;
+	transition: margin-left 1.5s ease-in-out,
+				opacity .1s 1.5s linear;
+}
+
+input:focus ~ .lightbulb {
+	
+	opacity: 1;
+	transition: all .1s 1.5s linear;
+}
+
+/*Example nine - */
+
+.example-nine {
+	margin-top: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
