@@ -398,6 +398,7 @@
 	opacity: 0;
 	
 }
+
 .lightbulb img {
 	height: 1.3em;
 	width: 1.6em;
@@ -429,13 +430,24 @@ input:focus ~ .lightbulb {
 
 
 
+.spelunky {
+    width: 75px;
+    height: 80px;
+    background-image: url(images/patrick-spelunky.png);
+    -webkit-animation: play 1.8s steps(10) infinite;
+    		animation: play 1.8s steps(10) infinite;
+}
 
 
+@-webkit-keyframes play {
+   from { background-position-x:    0px; }
+     to { background-position-x: -800px; }
+}
 
-
-
-
-
+@-webkit-keyframes play {
+   from { background-position-x:    0px; }
+     to { background-position-x: -800px; }
+}
 
 
 
