@@ -580,7 +580,7 @@ input:focus ~ .lightbulb {
 
 }
 
-/*Example twelve - cosby sweater*/
+/*Example twelve - cosby sweater - text tooplip*/
 .example-twelve {
 	margin-top: 2em;
 }
@@ -590,7 +590,7 @@ input:focus ~ .lightbulb {
     position: relative;
     
   }
-  a:after {
+  .cosby:after {
     
     content: attr(data-tooltip);
     position: absolute;
@@ -608,7 +608,7 @@ input:focus ~ .lightbulb {
     -webkit-transition: all 0.4s ease;
     
   }
-  a:before {
+  .cosby:before {
     content: "";
     position: absolute;
     border-bottom: 10px solid transparent;
@@ -713,24 +713,227 @@ input:focus ~ .lightbulb {
 
 
 
-/*Example fourteen */
+/*Example fourteen - hover and pseudo element drawing*/
 
 .example-fourteen {
 	margin-top: 2em;
+	position: relative;
 }
 
 
+.container, .container-two {
+    position: relative;
+    text-decoration:none;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.outer, .outer-two {
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+    background: #002;
+    position: relative;
+}
+
+.inner, .inner-two {
+    height: 8em;
+    width: 8em;
+    border-radius: 100%;
+    background: #70593F;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    text-align: center;
+}
+.inner-text, .inner-text-two {
+    color: #fff;
+    margin-top: 2.3em;
+    font-size: 1.4em;
+}
+
+.outer:before, .outer:after {
+    height: .3em;
+    width: 1.5em;
+    background: #70593F;
+    content:" ";
+    border: 1px solid #70593F;
+    position: absolute;
+    top:48%;
+}
+
+.outer:before {
+    top:48%;
+}
+
+.outer:after {
+    height: .3em;
+    width: 1.5em;
+    background: #70593F;
+    content:" ";
+    border: 1px solid #70593F;
+    position: absolute;
+    top:48%;
+    right:0
+}
+
+.inner:before, .inner:after {
+    height: .3em;
+    width: 1em;
+    background: #70593F;
+    content:" ";
+    border: 1px solid #70593F;
+    position: absolute;
+    top:88%; 
+}
+
+.inner:before {
+    -webkit-transform: rotate(316deg);
+    left: .45em;   
+    
+}
+
+.inner:after {
+    -webkit-transform: rotate(44deg);
+    right: .45em;    
+}
+
+.words {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.words:before, .words:after {
+    height: 16px;
+    width: 16px;
+    background: transparent;
+    content:attr(data-foo);
+    color: #fff;
+    font-size:.5em;
+    position: absolute;
+    top:130%;  
+}
+
+.words:before {
+    left:-32%;  
+}
+
+.words:after {
+    right:-32%;  
+}
+
+.bottom-number:before {
+    position: absolute;
+    color:#fff;
+    content: attr(data-foo);
+    height: 20px;
+    width:20px;
+    bottom: -.4em;
+    left: 6.1em;
+    z-index: 3;
+    font-size: .78em;
+}
 
 
+.container-two {
+    position: relative;
+    margin-left: 15%;
+    margin-top:.5em;
+    opacity:0;
+    margin-top: 10em;
+}
+
+.container:hover ~.container-two {
+    opacity:1;
+    transition: .2s 1s all linear;
+}
+
+.line {
+    position: absolute;
+    left:10em;
+    top:8em;
+    -webkit-transform: rotate(37deg);
+    opacity: 0;
+}
+
+.container:hover ~.line {
+    -webkit-transform: translate(95px, 115px);
+    opacity: 1;
+    transition: -webkit-transform 1s linear,
+                opacity .2s linear;
+}
 
 
+/*Example fifteen - loading-bar*/
 
+.example-fifteen {
+	margin-top: 2em;
+	font-family: Helvetica;
+}
 
+.large-loading-box {
+	height: 50px;
+	width: 200px;
+	background: transparent;
+	z-index: 1;
+	position: relative;
 
+}
+.background-loading {
+	height: 50px;
+	width: 200px;
+	background: red;
+	z-index: -10;
+}
+.loading-bar {
+	position: absolute;
+	height: 20%;
+	width: 5%;
+	background: #fff;
+	opacity: 0;
+	transition: all 2s ease-in;
+}
 
+.top-load-bar {
+	top:0;	
+}
 
+.bottom-load-bar {
+	bottom:0;
 
+}
 
+.load-bar-text {
+	position: relative;
+	font: Helvetica;
+	color: #fff;
+	top:30%;
+	text-align: center;
+	opacity: .8;
+}
 
+.hidden-load-bar-text {
+	margin-top: -2%;
+	opacity: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.large-loading-box:active .loading-bar {
+	width: 100%;
+	opacity: .85
+
+}
+
+.large-loading-box:active .hidden-load-bar-text {
+	opacity: .75;
+	transition: all 1s linear;
+}
+
+.large-loading-box:active .load-bar-text {
+	opacity: 0;
+	transition all .1s linear;
+}
 
 
