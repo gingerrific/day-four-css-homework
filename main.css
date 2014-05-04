@@ -510,7 +510,7 @@ input:focus ~ .lightbulb {
   }
 }
 
-/*Example eleven */
+/*Example eleven - moving placeholder*/
 
 .example-eleven {
 	margin-top: 2em;
@@ -537,8 +537,8 @@ input:focus ~ .lightbulb {
 .hidden-text {
 	font-size: 12px;
 	font-family: Helvetica;
-	margin-right: 1.5em;
-	margin-top: -.9em; 
+	margin-right: 1.3em;
+	margin-top: -.6em; 
 	opacity: 0;
 	transition: all .4s  linear;
 	z-index: -2;
@@ -560,17 +560,102 @@ input:focus ~ .lightbulb {
 	font-family: Helvetica;
 	z-index: 1;
 	color: #ffffff;
+	
+}
+
+[placeholder]:-webkit-input-placeholder {
+
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
 	color: transparent;
+	transition: all .4s linear;
 }
 
 #name-field:focus ~ .hidden-text {
 	opacity: 1;
-	margin-top: -.3em;
+	margin-top: -.2em;
 
 }
+
+/*Example twelve - cosby sweater*/
+.example-twelve {
+	margin-top: 2em;
+}
+
+  
+  .cosby {
+    position: relative;
+    
+  }
+  a:after {
+    
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 120%;
+    background: #98ff98;
+    padding: 5px 15px;
+    color: #FFF;
+    font-weight: bolder;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    border-radius        : 10px;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #98ff98;
+    -webkit-transition: all 0.4s ease;
+    opacity: 0;
+    left: 100%;
+    top: 0;
+  }
+  a:hover:after {
+    bottom: -35%;
+  }
+  a:hover:before {
+    top: 0;
+  }
+  a:hover:after, a:hover:before {
+    opacity: 1;
+  }
+
+
+/*Example Thirteen */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
