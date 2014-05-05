@@ -583,6 +583,7 @@ input:focus ~ .lightbulb {
 /*Example twelve - cosby sweater - text tooplip*/
 .example-twelve {
 	margin-top: 2em;
+	min-width: 600px;
 }
 
   
@@ -1054,7 +1055,7 @@ input[type=checkbox]:checked + label {
 	-webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
 }
 
-/*Example twenty-one - */
+/*Example twenty-one - card flip*/
 .example-twenty-one	{
 	margin-top: 2em;
 }
@@ -1107,13 +1108,205 @@ input[type=checkbox]:checked + label {
 }
 
 
+/*Example twenty two - color wheel*/
+
+.example-twenty-two {
+	margin-top: 2em;
+	position: relative;
+	height: 9em;
+	width: 9em;
+}
+
+.color-ball {
+	height: 5em;
+	width: 5em;
+	border-radius: 50%;
+	opacity: .45;
+	position: absolute;
+}
+
+.ball-one {
+	background-color: red;
+	top:0;
+	z-index: 7;
+	left: 2em;
+
+}
+
+.ball-two {
+	background-color: orange;
+	top: 10%;
+	right:5%;
+	z-index: 5;
+}
+
+.ball-three {
+	background-color: yellow;
+	bottom: 10%;
+	right: 5%;
+	z-index: 4;
+}
+
+.ball-four {
+	background-color: green;
+	bottom: 0;
+	left: 2em;
+	z-index: 3;
+}
+
+.ball-five {
+	background-color: blue;
+	bottom: 10%;
+	left: 5%;
+	z-index: 2;
+}
+
+.ball-six {
+	background-color: purple;
+	top: 10%;
+	left: 5%;
+	z-index: 1;
+}
+
+
+/*Example twenty-three - nth child*/
+
+.example-twenty-three {
+	margin-top: 2em;
+}
+
+.special-list {
+	font-family: Garamond;
+	font-weight: bold;
+	font-size: 18px;
+	
+	color: blue;
+}
+
+.special-list li:nth-child(3) {
+	font-family: Helvetica;
+	color: red;
+	text-decoration: underline;
+	font-weight: 400;
+	list-style: none;
+}
+
+/*Example twenty four - cursors */
+.example-twenty-four {
+	margin-top: 2em;
+	font-weight: "Helvetica Neue";
+	font-size: 16px;
+	line-height: 20px;
+
+}
+
+.line-one {
+	cursor: default ;
+}
+
+.line-two {
+	cursor: pointer;	
+}
+
+.line-three {
+	cursor: wait;	
+}
+
+.line-four {
+	cursor: cell;	
+}
+
+.line-five {
+	cursor: crosshair;	
+}
+
+.line-six {
+	cursor: move;	
+}
+
+.line-seven {
+	cursor: not-allowed;	
+}
+
+/*Example twenty-five - */
+
+.example-twenty-five {
+	margin-top: 2em;
+	height: 120px;
+	width: 120px;
+	position: relative;
+}
+
+.box-sizer {
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	background-color: #2FA294;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.box-sizer:hover {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;  
+	opacity: 0;
+	z-index: -1;
+}
+
+.box-sizer-hidden-text {
+    position: absolute;
+    height: 100px;
+	width: 100px;
+	border: 1px solid black;
+	background-color: #2FA294;
+	padding: 20px;
+    z-index: -12;
+    opacity: 0;
+    -webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+}
+
+.box-sizer:hover ~ .box-sizer-hidden-text {
+	opacity: 1;
+	z-index: 1;
+}
 
 
 
+/*Example twenty-six - */
+.example-twenty-six{
+	margin-top: 2em;
+}
 
 
+/*Example twenty-seven - */
+.example-twenty-seven {
+	margin-top: 2em;
+}
 
 
+/*Example twenty-eight - */
+.example-twenty-eight {
+	margin-top: 2em;
+}
+
+
+/*Example twenty-nine - */
+.example-twenty-nine {
+	margin-top: 2em;
+}
+
+
+/*Example thirty - */
+.example-thirty {
+	margin-top: 2em;
+}
 
 
 
