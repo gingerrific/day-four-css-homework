@@ -1241,7 +1241,7 @@ input[type=checkbox]:checked + label {
 	height: 100px;
 	width: 100px;
 	border: 1px solid black;
-	background-color: #2FA294;
+	background-color: #2CA7A6;
 	padding: 20px;
 	text-align: center;
 	position: absolute;
@@ -1263,7 +1263,7 @@ input[type=checkbox]:checked + label {
     height: 100px;
 	width: 100px;
 	border: 1px solid black;
-	background-color: #2FA294;
+	background-color: #2CA7A6;
 	padding: 20px;
     z-index: -12;
     opacity: 0;
@@ -1284,24 +1284,86 @@ input[type=checkbox]:checked + label {
 	margin-top: 2em;
 }
 
+.skew {
+	height: 100px;
+	width: 100px;
+	background-color: #EA9117;
+	color: white;
+	text-align: center;
+	transition: all 1s ease;
+}
+
+.skew:hover {
+-webkit-transform: skew(45deg,45deg);
+  transform: skew(45deg,45deg);
+}
 
 /*Example twenty-seven - */
 .example-twenty-seven {
 	margin-top: 2em;
 }
 
+.hide {
+	height: 100px;
+	width: 100px;
+	background-color: #E54E26;
+	color: white;
+	text-align: center;
+	transition: all 1s ease;
+}
+
+.hide:hover {
+	-webkit-transform: scale(0,0);
+  transform: scale(0,0);
+}
 
 /*Example twenty-eight - */
 .example-twenty-eight {
 	margin-top: 2em;
 }
 
+.color-change {
+	height: 100px;
+	width: 100px;
+	background-color: #A4978E;
+	color: white;
+	text-align: center;
+	transition: all 1s ease;
+	color: #fff;
+}
+
+.color-change:hover {
+	background-color: #6C373F;
+}
+
 
 /*Example twenty-nine - */
 .example-twenty-nine {
 	margin-top: 2em;
+	position: relative;
+	height: 100px;
+	width: 100px;
+	display: block;
 }
 
+
+.condense {
+	height: 100px;
+	width: 100px;
+	background-color: #028002;
+	color: white;
+	text-align: center;
+	transition: all 1s ease;
+	color: #fff;
+	position: absolute;
+	bottom:0;
+	
+}
+
+
+.condense:hover{
+  height: 0px;
+}
 
 /*Example thirty - */
 .example-thirty {
