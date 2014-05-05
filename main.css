@@ -607,7 +607,7 @@ input:focus ~ .lightbulb {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 130%;
-    left: 120%;
+    left: 113%;
     background: #98ff98;
     padding: 5px 15px;
     color: #FFF;
